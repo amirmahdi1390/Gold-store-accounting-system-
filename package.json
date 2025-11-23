@@ -1,0 +1,47 @@
+{
+  "name": "first_project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/charts": "^8.3.5",
+    "@mantine/core": "^8.3.5",
+    "@mantine/form": "^8.3.5",
+    "@mantine/hooks": "^8.3.5",
+    "@mantine/modals": "^8.3.5",
+    "@tailwindcss/vite": "^4.1.15",
+    "axios": "^1.12.2",
+    "react": "^19.1.1",
+    "react-auth-kit": "^4.0.2-alpha.11",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.64.0",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.9.3",
+    "react-select": "^5.10.2",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
+    "recharts": "^3.3.0",
+    "tailwindcss": "^4.1.15",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "vite": "^7.1.2"
+  }
+}

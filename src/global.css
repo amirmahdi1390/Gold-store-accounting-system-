@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.glass-card {
+    background-color: rgba(56, 56, 56, 0.141);
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 10px 2px rgba(65, 85, 65, 0.39);
+}
+
+.new-product {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem;
+}
