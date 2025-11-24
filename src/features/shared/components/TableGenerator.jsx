@@ -2,20 +2,21 @@ import { Button, Table } from "@mantine/core";
 import React from "react";
 import useDrawer from "../../store/states/useDrawer";
 
-function TableGenerator({ data }) {
+function TableGenerator({ data,type }) {
   let {setDrawerState} = useDrawer()
+  let buttonType = type ==="manufacturers"?"show info":"edit"
   let {head,caption,body}= data
   return (
    <div>
     <Table 
       highlightOnHover
-      highlightOnHoverColor="gold"
+      highlightOnHoverColor="gray"
       stickyHeader
       striped={"even"}
       verticalSpacing={"sm"}
       withRowBorders
     >
-      <Table.Thead>
+      <Table.Thead >
       <Table.Tr>
         {head?.map((h)=>{
           return <Table.Th>{h}</Table.Th>
@@ -32,11 +33,13 @@ function TableGenerator({ data }) {
           })}
           <Table.Td><Button variant="outline" onClick={()=>{
             setDrawerState(true)
-          }}>edit</Button></Table.Td>
+          }}>{buttonType}</Button></Table.Td>
         </Table.Tr>
          )
         })}
+        <Table.Caption>{caption}</Table.Caption>
       </Table.Tbody>
+      
     </Table>
    
 
