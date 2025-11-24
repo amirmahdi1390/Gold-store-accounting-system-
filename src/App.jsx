@@ -9,7 +9,6 @@ function App() {
     <>
     <BrowserRouter>
     <AppRoutes />
-    
     <Switcher ></Switcher>
 </BrowserRouter>
   </>

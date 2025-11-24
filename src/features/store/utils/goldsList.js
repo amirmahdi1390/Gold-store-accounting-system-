@@ -1,15 +1,49 @@
+
 let goldsList = {
-    caption:"the existance of golds and jewelries in stock",
-    head:["category","quantity","total width(gr)"],
-    body:[
-        ["Gold Earings",100,2000],
-        ["Gold Necklaces",300,3000],
-        ["Gold Bracelets",200,5000],
-        ["Gold Rings",400,1000],
-        ["Gold Coins",30,200],
-        ["Gold Bars",2,2000],
-        ["Gold Chains",400,1000],
-        ["Other Golds",50,200],
-    ]
+  caption: "the existence of golds and jewelries in stock",
+  head: ["category", "quantity", "totalWeight"],
+  body: [
+    {
+      category: "Gold Earings",
+      quantity: 100,
+      totalWeight: 2000,
+    },
+    {
+      category: "Gold Necklaces",
+      quantity: 300,
+      totalWeight: 3000,
+    },
+    {
+      category: "Gold Bracelets",
+      quantity: 200,
+      totalWeight: 5000,
+    },
+    {
+      category: "Gold Rings",
+      quantity: 400,
+      totalWeight: 1000,
+    },
+    {
+      category: "Gold Coins",
+      quantity: 30,
+      totalWeight: 200,
+    },
+    {
+      category: "Gold Bars",
+      quantity: 2,
+      totalWeight: 2000,
+    },
+    {
+      category: "Gold Chains",
+      quantity: 400,
+      totalWeight: 1000,
+    },
+    {
+      category: "Other Golds",
+      quantity: 50,
+      totalWeight: 200,
+    },
+  ],
 }
+
 export default goldsList

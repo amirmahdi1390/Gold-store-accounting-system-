@@ -6,16 +6,33 @@ import { MantineProvider, createTheme } from '@mantine/core';
 import './global.css'
 import { ToastContainer } from 'react-toastify';
 
+const goldPalette = [
+  '#FFFAE5',
+  '#FFF6CC',
+  '#FFF2B2',
+  '#FFEE99',
+  '#FFE97F',
+  '#FFE566',
+  '#ffe14c',
+  '#ffdd32',
+  '#ffd819',
+  '#ffd400'
+];
+
 const greenTheme = createTheme({
-  primaryColor: 'teal'
+  colors: {
+    gold: goldPalette
+  },
+  primaryColor: 'gold',
+  
 })
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MantineProvider theme={greenTheme} defaultColorScheme="dark">
+    <MantineProvider theme={greenTheme} defaultColorScheme="light">
     <App />
     <ToastContainer 
-      theme='dark'
+      theme='light'
       position='bottom-right'
       autoClose={3000}
       />

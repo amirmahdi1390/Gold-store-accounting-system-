@@ -3,17 +3,23 @@ import { FloatingIndicator, Tabs , Menu,Button,Drawer} from '@mantine/core';
 import classes from './styles/Switcher.module.css';
 import tabsList from '../store/utils/tabsList';
 import { Link, useLocation, useParams } from 'react-router';
+import useDrawer from '../store/states/useDrawer';
 
 
 function Switcher() {
-  let [drawerState , SetDrawerState] = useState(false)
+  
+  let {drawerState,setDrawerState}= useDrawer()
+  
+  
+  
+
   let location = useLocation();
   let a = location.pathname.replace("/", "");  
   const [rootRef, setRootRef] = useState(null);
   // const [value, setValue] = useState(`${tabsList[0]?.name}`);
   const [value, setValue] = useState(`${a? a : tabsList[0]?.name}`);
 
-  // Use useRef for mutable refs without causing re-renders
+  
   const controlsRefs = useRef({});
 
   const setControlRef = (val) => (node) => {
@@ -39,7 +45,7 @@ function Switcher() {
          <Menu.Dropdown>
            <Menu.Item>{e.name} list</Menu.Item>
            <Menu.Item onClick={()=>{
-            SetDrawerState(true)
+            setDrawerState(true)
            }}>Add new {e.name}</Menu.Item>
          </Menu.Dropdown>
        </Menu>
@@ -55,7 +61,7 @@ function Switcher() {
         >
         </FloatingIndicator>
       </Tabs.List>
-      <Drawer radius={"lg"} position="left" size="xl" opened={drawerState}  onClose={() => {SetDrawerState(false)}}>
+      <Drawer radius={"lg"} position="left" size="xl" opened={drawerState}  onClose={() => {setDrawerState(false)}}>
       {/* Drawer content */}
     </Drawer>
       <Tabs.Panel value="1"></Tabs.Panel>
