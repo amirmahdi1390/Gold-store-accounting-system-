@@ -3,7 +3,7 @@ import React from "react";
 import useDrawer from "../../store/states/useDrawer";
 
 function TableGenerator({ data,type }) {
-  let {setDrawerState} = useDrawer()
+  let {openDrawer} = useDrawer()
   let buttonType = type ==="manufacturers"?"show info":"edit"
   let {head,caption,body}= data
   return (
@@ -25,14 +25,14 @@ function TableGenerator({ data,type }) {
       </Table.Tr>
       </Table.Thead>
       <Table.Tbody>
-        {body?.map((r)=>{
+        {body?.map((r,index)=>{  
          return(
           <Table.Tr>
           {r?.map((d)=>{
             return <Table.Td>{d}</Table.Td>
           })}
           <Table.Td><Button variant="outline" onClick={()=>{
-            setDrawerState(true)
+            openDrawer({state:true ,content:type,mode:buttonType,data:index})
           }}>{buttonType}</Button></Table.Td>
         </Table.Tr>
          )

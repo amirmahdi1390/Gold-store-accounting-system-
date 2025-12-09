@@ -4,8 +4,11 @@ function listFormatter(list) {
         let headItems = list?.head?.map((h)=>{
           return b[h]
         })
+        
         return headItems
        })
+     
+       
         return {...list,body:bodyItems}
 }
 

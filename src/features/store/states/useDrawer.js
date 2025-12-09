@@ -1,9 +1,17 @@
 import { create } from "zustand";
 
-
 const useDrawer = create((set) => ({
-    drawerState: false,
-    setDrawerState: (currentValue) => set(() => ({drawerState: currentValue})) 
-}))
+  isDrawerOpen: false,
+  drawerContent: null,
+  drawerMode: "add",
+  drawerData: null,
+  openDrawer: ({ state, content, mode, data }) =>
+    set((prev) => ({
+      isDrawerOpen: state? state :false,
+      drawerContent: content? content:null,
+      drawerMode: mode ? mode : "add",
+      drawerData: data? data :null,
+    })),
+}));
 
-export default useDrawer
+export default useDrawer;

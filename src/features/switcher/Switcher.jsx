@@ -4,11 +4,12 @@ import classes from './styles/Switcher.module.css';
 import tabsList from '../store/utils/tabsList';
 import { Link, useLocation, useParams } from 'react-router';
 import useDrawer from '../store/states/useDrawer';
+import FieldGenerator from '../shared/components/FieldGenerator';
 
 
 function Switcher() {
   
-  let {drawerState,setDrawerState}= useDrawer()
+  let {isDrawerOpen,openDrawer}= useDrawer()
   
   
   
@@ -45,7 +46,7 @@ function Switcher() {
          <Menu.Dropdown>
            <Menu.Item>{e.name} list</Menu.Item>
            <Menu.Item onClick={()=>{
-            setDrawerState(true)
+            openDrawer({state:true, content:e.name})
            }}>Add new {e.name}</Menu.Item>
          </Menu.Dropdown>
        </Menu>
@@ -61,8 +62,8 @@ function Switcher() {
         >
         </FloatingIndicator>
       </Tabs.List>
-      <Drawer radius={"lg"} position="left" size="xl" opened={drawerState}  onClose={() => {setDrawerState(false)}}>
-      {/* Drawer content */}
+      <Drawer radius={"lg"} position="left" size="xl" opened={isDrawerOpen}  onClose={() => {openDrawer({state:false ,content:null,mode:"add",data:null})}}>
+      <FieldGenerator/>
     </Drawer>
       <Tabs.Panel value="1"></Tabs.Panel>
       <Tabs.Panel value="2"></Tabs.Panel>

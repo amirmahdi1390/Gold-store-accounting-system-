@@ -4,7 +4,7 @@ import goldsList from '../../store/utils/goldsList'
 import listFormatter from '../../shared/functions/ListFormatter';
 function Golds() {
   return (
-    <TableGenerator data={listFormatter(goldsList)}  />
+    <TableGenerator data={listFormatter(goldsList)} type={"golds"} />
 
   )
 }
