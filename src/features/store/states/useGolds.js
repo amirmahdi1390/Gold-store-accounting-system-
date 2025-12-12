@@ -14,7 +14,10 @@ const useGolds = create((set) => ({
         
         return {golds:{...prev.golds,body:currentBody}}
       }),
-
+      deleteGold: (index) =>
+        set((prev) => ({
+        golds:{...prev.golds,body: prev.golds.body.filter((element,eIndex)=>(eIndex !== index))}
+        })),
 
 }));
 

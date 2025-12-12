@@ -14,7 +14,10 @@ const useManufacturers = create((set) => ({
         
         return {manufacturers:{...prev.manufacturers,body:currentBody}}
       }),
-
+      deleteManufacturer: (index) =>
+        set((prev) => ({
+          manufacturers:{...prev.manufacturers,body: prev.manufacturers.body.filter((element,eIndex)=>(eIndex !== index))}
+        })),
 }));
 
 export default useManufacturers

@@ -1,4 +1,4 @@
-import { Button, DrawerContent, Table } from "@mantine/core";
+import { Button,Table } from "@mantine/core";
 import React from "react";
 import useDrawer from "../../store/states/useDrawer";
 
