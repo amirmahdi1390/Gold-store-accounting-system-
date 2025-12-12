@@ -1,4 +1,4 @@
-import { Button, Table } from "@mantine/core";
+import { Button, DrawerContent, Table } from "@mantine/core";
 import React from "react";
 import useDrawer from "../../store/states/useDrawer";
 
@@ -31,8 +31,8 @@ function TableGenerator({ data,type }) {
           {r?.map((d)=>{
             return <Table.Td>{d}</Table.Td>
           })}
-          <Table.Td><Button variant="outline" onClick={()=>{
-            openDrawer({state:true ,content:type,mode:buttonType,data:index})
+          <Table.Td><Button variant="outline"  onClick={()=>{
+            openDrawer({state:true ,content:type,mode:buttonType,data:index+1})
           }}>{buttonType}</Button></Table.Td>
         </Table.Tr>
          )

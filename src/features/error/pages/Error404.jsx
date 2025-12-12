@@ -14,7 +14,7 @@ import { Link } from 'react-router';
             page has been moved to another URL. If you think this is an error contact support.
           </Text>
         <Link to='/'>  <Button variant="outline" size="md" mt="xl" className={classes.control}>
-            Get back to home page
+            Get back home page
           </Button></Link>
         </div>
       </SimpleGrid>

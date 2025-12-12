@@ -45,6 +45,41 @@ let manufacturersFields = [
         required:true,
         placeHolder:"enter the phone of the selected manufacturer"
     },
+    {
+        type:"number",
+        name:"age",
+        label:"manufacturer age",
+        required:true,
+        placeHolder:"enter the age of the selected manufacturer"
+    },
+    {
+        type:"email",
+        name:"email",
+        label:"manufacturer email",
+        required:true,
+        placeHolder:"enter the email of the selected manufacturer"
+    },
+    // {
+    //     type:"file",
+    //     name:"image",
+    //     label:"manufacturer image",
+    //     required:false,
+    //     placeHolder:"enter the image of the selected manufacturer"
+    // },
+    {
+        type:"text",
+        name:"gender",
+        label:"manufacturer gender",
+        required:true,
+        placeHolder:"enter the gender of the selected manufacturer"
+    },
+    {
+        type:"text",
+        name:"about",
+        label:"manufacturer about",
+        required:false,
+        placeHolder:"enter the about of the selected manufacturer"
+    },
 ]
 
 export {goldsFields,manufacturersFields}

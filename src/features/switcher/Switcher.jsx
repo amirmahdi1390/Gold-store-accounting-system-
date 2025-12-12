@@ -5,11 +5,14 @@ import tabsList from '../store/utils/tabsList';
 import { Link, useLocation, useParams } from 'react-router';
 import useDrawer from '../store/states/useDrawer';
 import FieldGenerator from '../shared/components/FieldGenerator';
-
+import EditFunction from '../shared/components/EditFunction';
+import ShowInfoFunction from '../shared/components/ShowInfoFunction';
+import AddFunction from '../shared/components/AddFunction';
+import Error404 from './../error/pages/Error404.jsx';
 
 function Switcher() {
   
-  let {isDrawerOpen,openDrawer}= useDrawer()
+  let {isDrawerOpen,openDrawer,drawerMode}= useDrawer()
   
   
   
@@ -63,7 +66,8 @@ function Switcher() {
         </FloatingIndicator>
       </Tabs.List>
       <Drawer radius={"lg"} position="left" size="xl" opened={isDrawerOpen}  onClose={() => {openDrawer({state:false ,content:null,mode:"add",data:null})}}>
-      <FieldGenerator/>
+      {/* <FieldGenerator/> */}
+    {drawerMode == "edit" ?<EditFunction/>:drawerMode == "show info" ? <ShowInfoFunction/> : drawerMode == "add" ? <AddFunction/>:<Error404/>}
     </Drawer>
       <Tabs.Panel value="1"></Tabs.Panel>
       <Tabs.Panel value="2"></Tabs.Panel>

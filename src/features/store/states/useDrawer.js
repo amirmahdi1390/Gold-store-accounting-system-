@@ -6,7 +6,7 @@ const useDrawer = create((set) => ({
   drawerMode: "add",
   drawerData: null,
   openDrawer: ({ state, content, mode, data }) =>
-    set((prev) => ({
+    set(() => ({
       isDrawerOpen: state? state :false,
       drawerContent: content? content:null,
       drawerMode: mode ? mode : "add",
