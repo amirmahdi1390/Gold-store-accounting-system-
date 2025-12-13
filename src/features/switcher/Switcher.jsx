@@ -65,7 +65,7 @@ function Switcher() {
         >
         </FloatingIndicator>
       </Tabs.List>
-      <Drawer radius={"lg"} position="left" size="xl" opened={isDrawerOpen}  onClose={() => {openDrawer({state:false ,content:null,mode:"add",data:null})}}>
+      <Drawer radius={"lg"}  position="left" size="xl" opened={isDrawerOpen}  onClose={() => {openDrawer({state:false ,content:null,mode:"add",data:null})}}>
       {/* <FieldGenerator/> */}
     {drawerMode == "edit" ?<EditFunction/>:drawerMode == "show info" ? <ShowInfoFunction/> : drawerMode == "add" ? <AddFunction/>:<Error404/>}
     </Drawer>

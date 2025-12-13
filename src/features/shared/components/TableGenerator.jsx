@@ -37,9 +37,9 @@ function TableGenerator({ data,type }) {
         </Table.Tr>
          )
         })}
-        <Table.Caption>{caption}</Table.Caption>
-      </Table.Tbody>
       
+      </Table.Tbody>
+      <Table.Caption className="flex items-center" style={{ textAlign: 'center' }}>{caption}</Table.Caption>
     </Table>
    
 
